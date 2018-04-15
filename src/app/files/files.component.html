@@ -1,0 +1,45 @@
+
+<div *ngIf="tree">
+
+  {{tree.name}}
+
+  <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-cell--12-col-phone mdl-cell--12-col-tablet mdl-cell--10-col-desktop mdl-cell--1-offset-desktop">
+    <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Pinned</th>
+      <th class="mdl-data-table__cell--non-numeric">File name</th>
+      <th>Last modified</th>
+      <th>Size</th>
+      <th class="mdl-data-table__cell--non-numeric"></th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let children of tree.children">
+        <td>
+          <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-2">
+            <input type="checkbox" id="icon-toggle-2" class="mdl-icon-toggle__input">
+            <i class="mdl-icon-toggle__label material-icons">format_italic</i>
+          </label>
+        <td>
+        <a href="{{settingService.apiFilePath}}{{children.hash}}">{{children.name}}</a>
+
+        </td>
+        <td>
+
+        </td>
+        <td>
+          {{children.size}}
+        </td>
+        <td>
+        </td>
+      </tr>
+
+    </tbody>
+    <tbody id="test">
+    </tbody>
+  </table>
+</div>
+
+
+
+
