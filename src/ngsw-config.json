@@ -32,12 +32,14 @@
     {
       "name": "tasks-users-api",
       "urls": ["/messages", "/files", "/common"],
+      /*
       "cacheConfig": {
         "strategy": "freshness",
         "maxSize": 20000,
         "maxAge": "1h",
         "timeout": "60s"
       }
+      */
     }
   ]
 
