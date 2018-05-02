@@ -6,6 +6,7 @@ import {Observable} from 'rxjs/Observable';
 import {catchError, tap} from 'rxjs/operators';
 import { of } from 'rxjs/observable/of';
 import {Tree} from './file';
+import {map} from 'rxjs/operator/map';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json',

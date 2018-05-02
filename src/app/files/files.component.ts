@@ -10,6 +10,7 @@ import {SettingsService} from '../common/settings.service';
 })
 export class FilesComponent implements OnInit {
   tree: Tree[];
+  displayedColumns = ['pinned', 'name', 'last_modified', 'size'];
   loading: boolean;
 
   constructor(

@@ -12,6 +12,11 @@ import {HttpClientModule} from '@angular/common/http';
 import {MessageService} from './messages/message.service';
 import {FileService} from './files/file.service';
 import {SettingsService} from './common/settings.service';
+import {
+  MatButtonModule, MatCardModule, MatCheckboxModule, MatIconModule, MatSidenavModule, MatTableModule,
+  MatToolbarModule
+} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,8 +26,16 @@ import {SettingsService} from './common/settings.service';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+    MatButtonModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatTableModule,
+    MatToolbarModule
   ],
   providers: [
     MessageService,
