@@ -1,41 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
-
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
+<div>
+  <header>
+    <mat-toolbar class="mat-primary">
       <!-- Title -->
-      <span class="mdl-layout-title">File Explorer</span>
+      <button class="menu-button" mat-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>File Explorer
       <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-      </nav>
-    </div>
+    </mat-toolbar>
   </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Title</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-    </nav>
-  </div>
-  <main class="mdl-layout__content">
-    <div class="page-content"><!-- Your content goes here -->
-      <div class="mdl-grid">
-        <app-files></app-files>
-      </div>
-    </div>
-  </main>
-  <div class="ui">
-    <app-messages></app-messages>
-  </div>
-</div>
+      <!-- Navigation. We hide it in small screens. -->
+      <mat-sidenav-container>
+        <mat-sidenav #sidenav mode="side" class="mat-background-accent">
+          <button mat-button>Link 1</button>
+        </mat-sidenav>
+        <mat-sidenav-content>
+          <app-files></app-files>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
 
 
 
